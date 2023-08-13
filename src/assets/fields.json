@@ -1,0 +1,178 @@
+[
+    [
+      {
+        "label": "First Name",
+        "value": "fir",
+        "rules": {
+          "min": 4,
+          "max": 20
+        }
+      },
+      {
+        "label": "Last Name",
+        "placeholder": "Last Name placeholder",
+        "rules": {
+          "min": 3
+        }
+      }
+    ],
+
+    [
+      {
+        "label": "Email",
+        "type": "email",
+        "rules": {
+          "email": true
+        }
+      },
+      {
+        "label": "Phone Number",
+        "type": "tel",
+        "isRequired": false
+      }
+    ],
+    {
+      "label": "Address",
+      "placeholder": "Address"
+    },
+    [
+      {
+        "label": "Zip",
+        "type": "number",
+        "placeholder": "Zip",
+        "showLabel": false
+      },
+      {
+        "label": "City",
+        "placeholder": "City",
+        "showLabel": false
+      }
+    ],
+    [
+      {
+        "label": "Country",
+        "type": "select",
+        "iconLeft": "globe-americas",
+        "placeholder": "Select your option",
+        "options": [
+          "Afghanistan",
+          "Åland Islands",
+          "Albania",
+          "Algeria",
+          "...",
+          "Western Sahara",
+          {
+            "text": "Yemen",
+            "value": "YE"
+          },
+          {
+            "text": "Zambia",
+            "value": "ZB",
+            "selected": true
+          },
+          "Zimbabwe"
+        ]
+      },
+      {
+        "label": "Age",
+        "type": "number",
+        "rules": {
+          "min_value": 18,
+          "max_value": 99
+        },
+        "help": "( >= 18 <= 99 )"
+      }
+    ],
+    [
+      {
+        "label": "Password",
+        "type": "password",
+        "pattern": ".[0-9]{4,}$",
+        "help": "(5 digits at least)"
+      },
+      {
+        "label": "Confirmation",
+        "alternativeLabel": "Password confirmation",
+        "type": "password",
+        "rules": {
+          "password": "@password"
+        }
+      }
+    ],
+    {
+      "html": "<p class='label'>Custom attr & validation<sup class='has-text-grey-light is-size-7'> *</sup></p>",
+      "attr": {
+        "class": "labelDefaultMb has-text-centered",
+        "data-test": "dataTestFromJson"
+      }
+    },
+    [
+      {
+        "label": "small",
+        "placeholder": "no string small",
+        "showLabel": false,
+        "value": "small",
+        "rules": {
+          "is_not": "small"
+        },
+        "attr": {
+          "data-attr": "testingAttrFromJson",
+          "class": "is-rounded"
+        }
+      },
+      {
+        "label": "big",
+        "placeholder": "must be a numeric value",
+        "showLabel": false,
+        "rules": {
+          "numeric": true
+        },
+        "field": {
+          "attr": {
+            "data-attr": "dataAttrOnField"
+          }
+        }
+      }
+    ],
+    {
+      "label": "Message",
+      "type": "textarea",
+      "isRequired": false
+    },
+    {
+      "slot": "boxSlot",
+      "props": {
+        "prop": "scoped slot"
+      }
+    },
+    {
+      "label": "Checkbox",
+      "type": "checkbox",
+      "items": [
+        {
+          "text": "one",
+          "value": 1,
+          "checked": true
+        },
+        {
+          "text": "two",
+          "checked": true
+        },
+        "three"
+      ]
+    },
+    {
+      "label": "Radio",
+      "type": "radio",
+      "items": [
+        {
+          "text": "RadioOne",
+          "value": "Radio-One",
+          "checked": true
+        },
+        "RadioTwo",
+        "RadioThree"
+      ]
+    }
+  ]
+  
