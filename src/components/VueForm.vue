@@ -16,12 +16,12 @@ import formJson from "vue-form-json";
 import jsonFields from "@/assets/fields";
 
 export default {
-    name: "app",
+    name: "VueForm",
     components: {
         formJson,
     },
     mounted() {
-        this.$root.$on("formSubmitted", (values) => alert(JSON.stringify(values)));
+        this.$root.$on("formSubmitted", (values) => console.log(JSON.stringify(values)));
     },
     computed: {
         jsonFields: () => jsonFields,
@@ -29,3 +29,8 @@ export default {
 };
 </script>
     
+<style>
+[type="reset"] {
+    display: none;
+}
+</style>

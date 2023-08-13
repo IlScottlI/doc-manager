@@ -2,10 +2,9 @@
     [
       {
         "label": "First Name",
-        "value": "fir",
+        "value": "",
         "rules": {
-          "min": 4,
-          "max": 20
+          "min": 1
         }
       },
       {
@@ -59,7 +58,7 @@
           "Åland Islands",
           "Albania",
           "Algeria",
-          "...",
+          "United States",
           "Western Sahara",
           {
             "text": "Yemen",
@@ -86,17 +85,12 @@
     [
       {
         "label": "Password",
-        "type": "password",
-        "pattern": ".[0-9]{4,}$",
-        "help": "(5 digits at least)"
+        "type": "password"
       },
       {
         "label": "Confirmation",
         "alternativeLabel": "Password confirmation",
-        "type": "password",
-        "rules": {
-          "password": "@password"
-        }
+        "type": "password"
       }
     ],
     {
@@ -111,9 +105,9 @@
         "label": "small",
         "placeholder": "no string small",
         "showLabel": false,
-        "value": "small",
+        "value": "",
         "rules": {
-          "is_not": "small"
+          "is_not": ""
         },
         "attr": {
           "data-attr": "testingAttrFromJson",
@@ -150,19 +144,17 @@
       "type": "checkbox",
       "items": [
         {
-          "text": "one",
-          "value": 1,
-          "checked": true
+          "text": "one"
         },
         {
-          "text": "two",
-          "checked": true
+          "text": "two"
         },
         "three"
       ]
     },
     {
       "label": "Radio",
+      "attr": { "class": "classOnInput" },
       "type": "radio",
       "items": [
         {
