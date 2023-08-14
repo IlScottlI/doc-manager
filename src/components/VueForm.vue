@@ -1,36 +1,64 @@
 <template lang="pug">
 #app.section
         form-json(
-            :btnReset="{ value: 'Reset' }",
-            :btnSubmit="{ value: 'Submit' }",
+            :btnReset="{ value: 'Close' , class: 'button is-pulled-right mt-4 me-4', style: {display: 'none'}}",
+            :btnSubmit="{ value: 'Save and Close' , class: 'button is-info mt-4'}",
             :camelizePayloadKeys="true",
-            :formFields="jsonFields",
-            formName="userProfil"
+            :formFields="formFields",
+            :mandatoryAsteriskLegend="mandatoryAsteriskLegend",
+            :formName="formName",
         )
+        
 </template>
     
 <script>
-// import 'bulma/css/bulma.min.css'
 import '@/form.css'
 import formJson from "vue-form-json";
-import jsonFields from "@/assets/fields";
+import jsonFields from "@/assets/TA010.json";
 
 export default {
+
     name: "VueForm",
+
     components: {
         formJson,
     },
+
+    data: () => ({
+        keys:null,
+        item:null,
+        formName: 'document',
+        mandatoryAsteriskLegend: '',
+        formFields: jsonFields,
+    }),
+
     mounted() {
-        this.$root.$on("formSubmitted", (values) => console.log(JSON.stringify(values)));
+        this.$root.$on("formSubmitted", (values) => {
+            this.keys = Object.keys(values.values);
+            console.log(this.keys, values.values);
+        });
     },
+
     computed: {
         jsonFields: () => jsonFields,
     },
+
+    methods:{
+        handleChange: (e) => {
+            console.log(e);
+        }
+    },
+
+    watch: {
+        formFields(e) {
+            console.log(e);
+        }
+    },
 };
 </script>
-    
+
 <style>
-[type="reset"] {
-    display: none;
+div:has([type="reset"]) {
+    justify-content: flex-end !important;
 }
 </style>

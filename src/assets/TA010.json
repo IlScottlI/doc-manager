@@ -1,0 +1,54 @@
+[
+  {
+    "html": "<div class='row'><div class='col'><div class='pa-2 v-sheet bg-gray rounded-5'> <strong>Front axle 1016429400 <br>&nbsp; &nbsp; &nbsp;Vendor PN 212-10164294</strong> </div></div><div class='col'><div class='pa-2 v-sheet rounded-5'><strong class='MsoNormal'> <br>&nbsp; &nbsp; &nbsp;</strong> </div></div></div>",
+    "attr": {
+      "class": "",
+      "style": {
+        "display": "none"
+      }
+    },
+    "details": {
+      "fields": 4
+    }
+  },
+  [
+    {
+      "label": "Front Axle Part Number",
+      "placeholder": "Front Axle Part Number",
+      "value": "1016429400",
+      "isRequired": false,
+      "attr": {
+        "disabled": false
+      },
+      "help": "    Vendor PN 212-10164294"
+    },
+    {
+      "label": "Front Axle Serial Number",
+      "placeholder": "Front Axle Serial Number",
+      "value": "",
+      "isRequired": false,
+      "help": "",
+      "rules": { "is_not": "1016429400" }
+    }
+  ],
+  [
+    {
+      "label": "Rear Axle Part Number",
+      "placeholder": "Rear Axle Part Number",
+      "value": "1016429500",
+      "isRequired": false,
+      "attr": {
+        "disabled": false
+      },
+      "help": "     Vendor PN 212-10164295"
+    },
+    {
+      "label": "Rear Axle Serial Number",
+      "placeholder": "Rear Axle Serial Number",
+      "value": "",
+      "isRequired": false,
+      "help": "",
+      "rules": { "is_not": "1016429500" }
+    }
+  ]
+]
