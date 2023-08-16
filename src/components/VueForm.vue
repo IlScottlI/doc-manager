@@ -1,13 +1,13 @@
 <template lang="pug">
 #app.section
-        form-json(
-            :btnReset="{ value: 'Close' , class: 'button is-pulled-right mt-4 me-4', style: {display: 'none'}}",
-            :btnSubmit="{ value: 'Save and Close' , class: 'button is-info mt-4'}",
-            :camelizePayloadKeys="true",
-            :formFields="formFields",
-            :mandatoryAsteriskLegend="mandatoryAsteriskLegend",
-            :formName="formName",
-        )
+    form-json(
+        :btnReset="{ value: 'Close' , class: 'button is-pulled-right mt-4 me-4', style: {display: 'none'}}",
+        :btnSubmit="{ value: 'Save and Close' , class: 'button is-info mt-4'}",
+        :camelizePayloadKeys="true",
+        :formFields="formFields",
+        :mandatoryAsteriskLegend="mandatoryAsteriskLegend",
+        :formName="formName",
+    )
         
 </template>
     
@@ -25,8 +25,8 @@ export default {
     },
 
     data: () => ({
-        keys:null,
-        item:null,
+        keys: null,
+        item: null,
         formName: 'document',
         mandatoryAsteriskLegend: '',
         formFields: jsonFields,
@@ -43,7 +43,7 @@ export default {
         jsonFields: () => jsonFields,
     },
 
-    methods:{
+    methods: {
         handleChange: (e) => {
             console.log(e);
         }
