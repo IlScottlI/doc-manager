@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-06T12:27:18.457Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="hwt1LnbV4-HFONQbA7zL" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-06T12:32:07.278Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="w99xjS73KNt48vuBYQPq" version="21.7.2" type="github" pages="2">
   <diagram name="Phase 1" id="7a6c530e-6e37-e111-ec74-82921da8cc10">
     <mxGraphModel dx="1020" dy="676" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="#ada9a9" math="0" shadow="0">
       <root>
@@ -267,6 +267,17 @@
           <mxGeometry x="0.1925" y="2" relative="1" as="geometry">
             <mxPoint x="-23" y="3" as="offset" />
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uI2d2cjUuS7RDx-FEBR7" name="Page-2">
+    <mxGraphModel dx="1440" dy="954" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KnjQmnhwKt4qZ79-v4kj-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.vorne.com/static/2cc88a92797daf4c605219caa985cc34/db321/oee-six-big-losses-image.png;" vertex="1" parent="1">
+          <mxGeometry x="39" y="161" width="800" height="533.33" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
