@@ -8,6 +8,11 @@ const router = new Router({
     scrollBehavior: () => ({ y: 0 }),
     routes: [
         {
+            path: "/index.html",
+            name: "DocAdmin",
+            component: () => import(/* webpackChunkName: "DocAdmin" */ "../views/DocViewer"),
+        },
+        {
             path: "/DocViewer",
             name: "DocViewer",
             component: () => import(/* webpackChunkName: "DocViewer" */ "../views/DocViewer"),
@@ -15,15 +20,15 @@ const router = new Router({
     ],
 });
 
-const DEFAULT_TITLE = "Workspace";
-router.afterEach((to, from) => {
-    // Use next tick to handle router history correctly
-    // see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
-    document.querySelector("#app").__vue__.$store.commit('setRoute', to);
-    document.querySelector("#app").__vue__.$store.commit('setRouteFrom', from);
-    Vue.nextTick(() => {
-        document.title = to.meta.title || DEFAULT_TITLE;
-    });
-});
+// const DEFAULT_TITLE = "DocManager";
+// router.afterEach((to, from) => {
+//     // Use next tick to handle router history correctly
+//     // see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
+//     document.querySelector("#app").__vue__.$store.commit('setRoute', to);
+//     document.querySelector("#app").__vue__.$store.commit('setRouteFrom', from);
+//     Vue.nextTick(() => {
+//         document.title = to.meta.title || DEFAULT_TITLE;
+//     });
+// });
 
 export default router;

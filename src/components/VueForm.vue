@@ -36,7 +36,17 @@ export default {
         this.$root.$on("formSubmitted", (values) => {
             this.keys = Object.keys(values.values);
             console.log(this.keys, values.values);
+            window.localStorage.setItem('formFields',JSON.stringify(this.jsonFields) );
+            window.localStorage.setItem('formFieldsRes',JSON.stringify(values.values) );
         });
+        let formFields = window.localStorage.getItem('formFields');
+        if(formFields == null){
+            window.localStorage.setItem('formFields',JSON.stringify(this.jsonFields) )
+        } else {
+            this.formFields = JSON.parse(window.localStorage.getItem('formFields'));
+        }
+        console.log(this.formFields);
+        console.log(formFields);
     },
 
     computed: {
